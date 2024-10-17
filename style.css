@@ -1,0 +1,194 @@
+:root {
+    --text-color: #2fb9d14b;
+    --text-color-blend: #235d94;
+    --back-up-color: #E7FAF9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/1809644/pexels-photo-1809644.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+nav {
+    width: 100%;
+    padding: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo h1 {
+    font-size: 27px;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+a {
+    color: #fff; /* Cor do texto alterada para branca */
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    transition: background-color 0.65s;
+}
+
+a:hover {
+    background-color: var(--text-color);
+}
+
+a.active {
+    background-color: var(--text-color);
+}
+
+#contact-button {
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.6s;
+}
+
+#contact-button:hover {
+    background-color: #27262536;
+}
+
+.home-content {
+    padding: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    height: 78vh;
+}
+
+.home-container {
+    width: 600px;
+}
+
+.home-container h1 {
+    font-size: 5rem;
+    padding-bottom: 30px;
+}
+
+.home-container p {
+    padding-bottom: 20px;
+}
+
+/* Estilos para a seção Services */
+.services {
+    padding: 5rem 0;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.card {
+    width: 30%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.445);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Mantém o efeito de hover nas três imagens */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    color: #FFFFFF; /* Cor do título dos cards (branca) */
+}
+
+.card-title a {
+    color: inherit; /* Herda a cor do pai (branco) */
+    text-decoration: none; /* Remove sublinhado do texto */
+}
+
+.card-title a:hover {
+    color: inherit; /* Mantém a cor do título branca ao passar o mouse */ 
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #FFFFFF; /* Cor do texto padrão (branca) */
+}
+
+/* Remove o efeito de hover do texto dos cards */
+.card-text:hover {
+    color: #FFFFFF; /* Mantém a cor do texto branca ao passar o mouse */
+}
+
+/* Estilos para a seção de contato */
+.contact {
+    padding: 2rem 5rem;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #fff; /* Cor do título de contato */
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem; /* Reduzir o padding do nav em telas pequenas */
+    }
+
+    nav .logo h1 {
+        font-size: 24px; /* Reduzir o tamanho da fonte da logo */
+    }
+
+    .home-content {
+        padding: 1rem; /* Reduzir o padding na home */
+        flex-direction: column; /* Alinhar itens verticalmente */
+        text-align: center; /* Centralizar o texto */
+    }
+
+    .home-container {
+        width: 100%; /* Deixar a largura 100% em telas pequenas */
+        padding: 0 1rem; /* Adicionar padding nas laterais */
+    }
+
+    .home-container h1 {
+        font-size: 3rem; /* Reduzir o tamanho do título */
+    }
+
+    .services-row {
+        flex-direction: column; /* Mudar a direção das cards para coluna */
+        align-items: center; /* Centralizar os cards */
+    }
+
+    .card {
+        width: 80%; /* Ajustar a largura dos cards para telas pequenas */
+        margin-bottom: 1rem; /* Adicionar espaço entre os cards */
+    }
+
+    .contact {
+        padding: 2rem 1rem; /* Reduzir o padding da seção de contato */
+    }
+}
